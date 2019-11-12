@@ -1,0 +1,8 @@
+C:\Projects\Map.Comunicator\Map.Comunicator.Domain\bin\Debug\netcoreapp3.0\Map.Comunicator.Domain.deps.json
+C:\Projects\Map.Comunicator\Map.Comunicator.Domain\bin\Debug\netcoreapp3.0\Map.Comunicator.Domain.dll
+C:\Projects\Map.Comunicator\Map.Comunicator.Domain\bin\Debug\netcoreapp3.0\Map.Comunicator.Domain.pdb
+C:\Projects\Map.Comunicator\Map.Comunicator.Domain\obj\Debug\netcoreapp3.0\Map.Comunicator.Domain.AssemblyInfoInputs.cache
+C:\Projects\Map.Comunicator\Map.Comunicator.Domain\obj\Debug\netcoreapp3.0\Map.Comunicator.Domain.AssemblyInfo.cs
+C:\Projects\Map.Comunicator\Map.Comunicator.Domain\obj\Debug\netcoreapp3.0\Map.Comunicator.Domain.dll
+C:\Projects\Map.Comunicator\Map.Comunicator.Domain\obj\Debug\netcoreapp3.0\Map.Comunicator.Domain.pdb
+C:\Projects\Map.Comunicator\Map.Comunicator.Domain\obj\Debug\netcoreapp3.0\Map.Comunicator.Domain.csprojAssemblyReference.cache

@@ -1,0 +1,11 @@
+C:\Projects\Map.Comunicator\Map.Comunicator.Service\bin\Debug\netcoreapp3.0\Map.Comunicator.Service.deps.json
+C:\Projects\Map.Comunicator\Map.Comunicator.Service\bin\Debug\netcoreapp3.0\Map.Comunicator.Service.dll
+C:\Projects\Map.Comunicator\Map.Comunicator.Service\bin\Debug\netcoreapp3.0\Map.Comunicator.Service.pdb
+C:\Projects\Map.Comunicator\Map.Comunicator.Service\bin\Debug\netcoreapp3.0\Map.Comunicator.Domain.dll
+C:\Projects\Map.Comunicator\Map.Comunicator.Service\bin\Debug\netcoreapp3.0\Map.Comunicator.Domain.pdb
+C:\Projects\Map.Comunicator\Map.Comunicator.Service\obj\Debug\netcoreapp3.0\Map.Comunicator.Service.csprojAssemblyReference.cache
+C:\Projects\Map.Comunicator\Map.Comunicator.Service\obj\Debug\netcoreapp3.0\Map.Comunicator.Service.AssemblyInfoInputs.cache
+C:\Projects\Map.Comunicator\Map.Comunicator.Service\obj\Debug\netcoreapp3.0\Map.Comunicator.Service.AssemblyInfo.cs
+C:\Projects\Map.Comunicator\Map.Comunicator.Service\obj\Debug\netcoreapp3.0\Map.Comunicator.Service.csproj.CopyComplete
+C:\Projects\Map.Comunicator\Map.Comunicator.Service\obj\Debug\netcoreapp3.0\Map.Comunicator.Service.dll
+C:\Projects\Map.Comunicator\Map.Comunicator.Service\obj\Debug\netcoreapp3.0\Map.Comunicator.Service.pdb
