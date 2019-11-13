@@ -17,6 +17,12 @@ namespace Service
             repository = _repository;
             mapper = _mapper;
         }
+
+        /// <summary>
+        /// Add a new Message
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public async Task<Message> AddMessage(MessageViewModel data)
         {
             var model = mapper.Map<Message>(data);
@@ -24,6 +30,12 @@ namespace Service
             return message;
         }
 
+        /// <summary>
+        /// Update a existing message
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public async Task<ResponseEnvelope<Message>> UpdateMessage(int id, MessageViewModel data)
         {
             var result = new ResponseEnvelope<Message>();
@@ -47,6 +59,10 @@ namespace Service
             return result;
         }
 
+        /// <summary>
+        /// Get all Messages
+        /// </summary>
+        /// <returns></returns>
         public IList<MessageViewModel> GetMessages()
         {
             var data = repository.GetAllAsync().ToList();

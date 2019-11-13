@@ -18,6 +18,11 @@ namespace EF
             context = appDbContext;
         }
 
+        /// <summary>
+        /// Insert
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public async Task<TEntity> AddAsync(TEntity entity)
         {
             context.Set<TEntity>().Add(entity);
@@ -25,21 +30,40 @@ namespace EF
             return entity;
         }
 
+        /// <summary>
+        /// Verify if exists
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
         public async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> filter)
         {
             return await context.Set<TEntity>().AsNoTracking().AnyAsync(filter);
         }
 
+        /// <summary>
+        /// Get by Filter
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
         public async Task<TEntity> GetBy(Expression<Func<TEntity, bool>> filter)
         {
             return await context.Set<TEntity>().AsNoTracking().Where(filter).FirstOrDefaultAsync();
         }
 
+        /// <summary>
+        /// Get all
+        /// </summary>
+        /// <returns></returns>
         public IQueryable<TEntity> GetAllAsync()
         {
             return context.Set<TEntity>().AsNoTracking();
         }
 
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public async Task<TEntity> UpdateAsync(TEntity entity)
         {
             context.Set<TEntity>().Attach(entity);

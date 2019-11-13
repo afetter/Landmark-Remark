@@ -52,6 +52,7 @@ namespace API
                 app.UseDeveloperExceptionPage();
             }
 
+            ///Really bad decision to allow all origins/methods and headers
             app.UseCors(opts => opts.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseRouting();
