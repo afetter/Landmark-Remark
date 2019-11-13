@@ -38,6 +38,11 @@ namespace Service
             return result;
         }
 
+        /// <summary>
+        /// Login - must be in a diferent service
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public async Task<ResponseEnvelope<bool>> Login(UserViewModel data)
         {
             var result = new ResponseEnvelope<bool>();
