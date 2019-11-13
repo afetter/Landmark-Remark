@@ -17,6 +17,11 @@ namespace Service
             mapper = _mapper;
         }
 
+        /// <summary>
+        /// Add User
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public async Task<ResponseEnvelope<User>> AddUser(UserViewModel data)
         {
             var result = new ResponseEnvelope<User>();
@@ -26,7 +31,6 @@ namespace Service
             {
                 return new ResponseEnvelope<User>().AddError("Users already exist");
             }
-
 
             var model = mapper.Map<User>(data);
             var user = await repository.AddAsync(model);

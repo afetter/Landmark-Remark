@@ -15,6 +15,10 @@ namespace API.Controllers
             service = _service;
         }
 
+        /// <summary>
+        /// Retuns all messages
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
@@ -22,6 +26,11 @@ namespace API.Controllers
             return Ok(data);
         }
 
+        /// <summary>
+        /// Create a new message
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] MessageViewModel value)
         {
@@ -34,6 +43,12 @@ namespace API.Controllers
             return Ok(data);
         }
 
+        /// <summary>
+        /// Update a message based on Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         [HttpPatch("{Id}")]
         public async Task<IActionResult> Update(int id, [FromBody] MessageViewModel value)
         {

@@ -10,6 +10,12 @@ using System.Linq.Expressions;
 
 namespace Test
 {
+    /// <summary>
+    /// Must create more scenarios of test. 
+    /// Success
+    /// Fail
+    /// Exception
+    /// </summary>
     public class MessageServiceTest
 
     {

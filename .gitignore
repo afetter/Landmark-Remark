@@ -14,3 +14,8 @@
 /Service/obj
 /Test/bin/Debug/netcoreapp3.0
 /Test/obj
+/API/API/bin/Release/netcoreapp3.0
+/API/API/Properties/PublishProfiles
+/Domain/bin/Release/netcoreapp3.0
+/EF/bin/Release/netcoreapp3.0
+/Service/bin/Release/netcoreapp3.0
