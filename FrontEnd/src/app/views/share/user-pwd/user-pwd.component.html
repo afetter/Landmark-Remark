@@ -1,22 +1,23 @@
-<div fxLayout="row" class="create-user" fxLayoutAlign="center center">
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
 
-    <mat-card class="box">
-        <mat-card-header>
-            <mat-card-title>{{title}}</mat-card-title>
-        </mat-card-header>
+        <mat-card class="bg-light border border-primary">
+            <mat-card-header>
+                <mat-card-title>{{title}}</mat-card-title>
+            </mat-card-header>
 
-        <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
-            <mat-card-content>
-                <mat-form-field>
-                    <input matInput placeholder="Username" formControlName="username">
-                </mat-form-field>
+            <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+                <mat-card-content>
+                    <mat-form-field>
+                        <input matInput placeholder="Username" formControlName="username" class="ml-4">
+                    </mat-form-field>
 
-                <mat-form-field>
-                    <input matInput placeholder="Password" formControlName="password">
-                </mat-form-field>
-            </mat-card-content>
-            <button mat-stroked-button color="accent" class="btn-block" [disabled]="form.invalid">Submit</button>
-        </form>
-    </mat-card>
-
+                    <mat-form-field>
+                        <input matInput placeholder="Password" formControlName="password" class="ml-4">
+                    </mat-form-field>
+                </mat-card-content>
+                <button mat-stroked-button color="accent" class="btn-block btn-outline-primary" [disabled]="form.invalid">Submit</button>
+            </form>
+        </mat-card>
+    </div>
 </div>

@@ -24,10 +24,8 @@
 </agm-map>
 <hr />
 <div class="container">
-
-
     <div class="row">
-        <div class="col-6">
+        <div class="col-md-6 col-sx-12">
             <mat-form-field>
                 <input matInput (keyup)="doFilter($event.target.value)" placeholder="Filter">
             </mat-form-field>
@@ -35,19 +33,19 @@
 
                 <ng-container matColumnDef="user">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> User </th>
-                    <td mat-cell *matCellDef="let element"> {{element.user}} </td>
+                    <td mat-cell style="width: 50%;" *matCellDef="let element"> {{element.user}} </td>
                 </ng-container>
 
                 <ng-container matColumnDef="text">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Message </th>
-                    <td mat-cell *matCellDef="let element"> {{element.text}} </td>
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header><span class="mr-2"></span> Message </th>
+                    <td mat-cell style="min-width: 50%;" *matCellDef="let element"><span class="mr-2"></span> {{element.text}} </td>
                 </ng-container>
 
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-sx-12 mt-4">
             <h2>Welcome to Landmark Remark</h2>
             <h3>By Anderson Fetter</h3>
             <hr />
