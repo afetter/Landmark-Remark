@@ -1,0 +1,65 @@
+<agm-map [latitude]="lat" [longitude]="lng" (mapClick)="mapClicked($event)" [zoom]="zoom">
+    <!-- <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker> -->
+    <agm-marker *ngFor="let m of listOfMessages" [latitude]="m.lat" [longitude]="m.lng" [markerDraggable]="true"
+        (markerClick)="selectMarker($event, m.user, m.id)">
+        <agm-info-window>
+            <div>
+                <form [formGroup]="form" (ngSubmit)="onSubmit(m.id, form)">
+                    <mat-form-field>
+                        <mat-label>User</mat-label>
+                        <input matInput readonly [value]="m.user">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Message</mat-label>
+                        <input matInput placeholder="Message" [readonly]="isReadOnly" formControlName="message"
+                            [value]="m.text">
+                    </mat-form-field>
+                    <br />
+                    <button mat-stroked-button color="accent" class="btn-block"
+                        [disabled]="(form.invalid && isReadOnly)">Submit</button>
+                </form>
+            </div>
+        </agm-info-window>
+    </agm-marker>
+</agm-map>
+<hr />
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-6">
+            <mat-form-field>
+                <input matInput (keyup)="doFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+            <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+                <ng-container matColumnDef="user">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> User </th>
+                    <td mat-cell *matCellDef="let element"> {{element.user}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="text">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Message </th>
+                    <td mat-cell *matCellDef="let element"> {{element.text}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+        <div class="col-6">
+            <h2>Welcome to Landmark Remark</h2>
+            <h3>By Anderson Fetter</h3>
+            <hr />
+            <p>
+                Click on the map to create a mark. Click on the mark to see or to write a message. You can also edit
+                your
+                message if you like,
+                click again in your marks. You shouldn't able to change a mark from someone else. Validation on the
+                front
+                end and back end.
+            </p>
+
+        </div>
+    </div>
+</div>

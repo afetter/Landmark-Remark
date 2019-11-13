@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>Landmark Remark</span>
+
+  <button mat-raised-button [routerLink]="['/user']">Register</button>
+  <button mat-raised-button [routerLink]="['/login']">Login</button>
+
+  <span class="example-spacer"></span>
+  <div *ngIf="loggedUser">
+    <span>G'Day {{loggedUser}} </span>
+    <button mat-raised-button (click)="logout()" color="accent">Logout</button>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>
